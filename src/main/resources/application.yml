@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    url: jdbc:h2:tcp://localhost/~/test
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+    hibernate:
+      ddl-auto: create
+logging:
+  level:
+    org.hibernate.SQL: debug
+#    org.hibernate.type: trace #??? ?? 2.x, hibernate5
+    org.hibernate.orm.jdbc.bind: trace #??? ?? 3.x, hibernate6
